@@ -16,7 +16,9 @@ function loadHTML(elementId, filePath) {
   // Cargar header y footer al inicio
   document.addEventListener("DOMContentLoaded", function() {
     loadHTML("header-container", "../src/components/header.html");
+    loadHTML("footer-container", "../src/components/footer.html");
   });
+  
   document.addEventListener("DOMContentLoaded", function () {
     const faders = document.querySelectorAll('.fade-in');
 
