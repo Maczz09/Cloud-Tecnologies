@@ -1,0 +1,85 @@
+<header class=" bg-white shadow">
+  <div
+    class="flex flex-col md:flex-row items-center justify-between p-4 mx-auto max-w-7xl "
+  >
+    <!-- Logo -->
+    <a href="../html/index.php"
+      ><img
+        src="../../public/assets/images/logo.png"
+        alt="Logo"
+        class="h-12 w-auto rounded mb-4 md:mb-0 bg-white"
+    /></a>
+
+    <!-- Botón Hamburguesa -->
+    <button id="menu-btn" class="block md:hidden focus:outline-none">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16m-7 6h7"
+        />
+      </svg>
+    </button>
+
+    <!-- Navigation -->
+    <nav
+      id="menu"
+      class="hidden md:flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 mb-4 md:mb-0"
+    >
+      <a
+        href="../html/index.php"
+        class="smky-btn3 relative hover:text-white py-2 px-6 after:absolute after:h-1 after:hover:h-[200%] transition-all duration-500 after:transition-all after:duration-500 overflow-hidden z-20 after:z-[-20] after:bg-orange-600 after:rounded-t-full after:w-full after:bottom-0 after:left-0 text-black"
+        >Inicio</a
+      >
+      <a
+        href="../html/about.php"
+        class="smky-btn3 relative hover:text-white  py-2 px-6 after:absolute after:h-1 after:hover:h-[200%] transition-all duration-500 after:transition-all after:duration-500 overflow-hidden z-20 after:z-[-20] after:bg-orange-600 after:rounded-t-full after:w-full after:bottom-0 after:left-0 text-black"
+        >Nosotros</a
+      >
+      <a
+        href="../html/services.php"
+        class="smky-btn3 relative hover:text-white  py-2 px-6 after:absolute after:h-1 after:hover:h-[200%] transition-all duration-500 after:transition-all after:duration-500 overflow-hidden z-20 after:z-[-20] after:bg-orange-600 after:rounded-t-full after:w-full after:bottom-0 after:left-0 text-black"
+        >Servicios</a
+      >
+      <a
+        href="../html/contact.php"
+        class="smky-btn3 relative hover:text-white  py-2 px-6 after:absolute after:h-1 after:hover:h-[200%] transition-all duration-500 after:transition-all after:duration-500 overflow-hidden z-20 after:z-[-20] after:bg-orange-600 after:rounded-t-full after:w-full after:bottom-0 after:left-0 text-black"
+        >Contáctanos</a
+      >
+    </nav>
+
+    <!-- Buttons -->
+    <div
+    id="auth-buttons"
+    class="hidden md:flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4"
+  >
+    <button
+      class="overflow-hidden relative w-36 p-2 h-10 bg-white text-[#1B0942] border-none rounded-md text-lg font-bold cursor-pointer relative z-10 group"
+    >
+      Explorar
+      <span
+        class="absolute w-40 h-36 -top-8 -left-3 bg-orange-200 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-bottom"
+      ></span>
+      <span
+        class="absolute w-40 h-36 -top-8 -left-3 bg-orange-400 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-bottom"
+      ></span>
+      <span
+        class="absolute w-40 h-36 -top-8 -left-3 bg-orange-600 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-bottom"
+      ></span>
+      <span
+        class="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute top-2 left-4 z-10 text-[#1B0942] text-lg font-bold"
+        >Empecemos!</span
+      >
+    </button>
+  </div>
+  
+  
+  </div>
+</header>
