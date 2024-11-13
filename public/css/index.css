@@ -24,5 +24,32 @@
     opacity: 1;
     transform: translateY(0);
   }
-  
-  
+/* Estilos generales */
+.carousel-container {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Carrusel de desplazamiento continuo */
+.carousel-track {
+  display: flex;
+  width: max-content; /* Permite que el contenido ocupe el ancho necesario */
+  animation: scroll 60s linear infinite;
+}
+
+.carousel-track img {
+  max-height: 100px;
+  margin-right: 1rem; /* Espacio entre las imágenes */
+  transition: transform 0.5s;
+}
+
+/* Animación para desplazamiento horizontal continuo */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Efecto de giro en hover */
+.carousel-track img:hover {
+  transform: scale(1.1) rotate(10deg);
+}
