@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./css/chatBotEstilos.css">
     <link rel="stylesheet" href="./css/output.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,11 +13,12 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/index.css" />
-  </head>
 
+  </head>
+      
   <body class="font-hanken">
     <div id="header-container" class="sticky top-0 z-50"></div>
-    <main class="font-hanken">
+    <main class="font-hanken main-content">
       <div
         class="relative h-screen bg-cover bg-center flex items-center justify-center"
         style="background-image: url('../public/assets/images/main.jpg')"
@@ -50,14 +52,18 @@
 
       <section class="bg-orange-50 py-12">
         <div class="container mx-auto">
-            <h2 class="text-4xl font-bold text-orange-600  justify-center mb-6 text-center py-12 fade-in">NUESTROS PARTNERS</h2>
-            <div class="carousel-container overflow-hidden relative fade-in">
-                <div id="carousel" class="carousel-track">
-                    <!-- Las imágenes se insertarán aquí desde JavaScript -->
-                </div>
+          <h2 class="text-4xl font-bold text-orange-600 justify-center mb-6 text-center py-12 fade-in">NUESTROS PARTNERS</h2>
+          <div class="carousel-container overflow-hidden relative fade-in">
+            <!-- Gradientes de desvanecido en los bordes -->
+            <div class="fade-left"></div>
+            <div class="fade-right"></div>
+            <div id="carousel" class="carousel-track">
+              <!-- Las imágenes se insertarán aquí desde JavaScript -->
             </div>
+          </div>
         </div>
-    </section>
+      </section>
+      
       <section
         class="flex flex-col md:flex-row items-center gap-8 px-8 py-16 bg-orange-50 fade-in"
       >
@@ -198,12 +204,14 @@
           <img src="./assets/images/llamado.jpg" alt="Imagen central" class="rounded-lg w-full h-full object-cover shadow-lg" />
         </div>
       
-
+        <div id="chatbot-container"></div>
       </section>
-      
     </main>
+
     <div id="footer-container" class=""></div>
-<script src="./js/carrusel.js"></script>
+
+    <script src="./js/chatBot.js"></script>   
+    <script src="./js/carrusel.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>
