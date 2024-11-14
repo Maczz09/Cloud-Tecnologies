@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nosotros</title>
+    <link rel="stylesheet" href="../../public/css/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../public/css/index.css" />
+    <link rel="stylesheet" href="../../public/css/about.css" />
+  </head>
+  <body class="font-hanken">
+    <div id="header-container" class="sticky top-0 z-50"></div>
+
+    <main class="bg-orange-50">
+      <section
+        class="flex flex-col md:flex-row items-center justify-between py-10 px-6 md:px-24 fade-in"
+      >
+        <div class="text-left w-full md:w-1/2 mb-6 md:mb-0">
+          <h1 class="text-3xl md:text-4xl font-bold mb-4 text-orange-600">
+            NOSOTROS
+          </h1>
+          <p
+            class="text-base md:text-lg max-w-xl mb-10 text-gray-600 justify-start"
+          >
+            Somos una empresa comprometida con brindar los mejores servicios y
+            productos a nuestros clientes, con un enfoque en la calidad,
+            innovación y sostenibilidad.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <!-- Misión -->
+            <div>
+              <h2 class="text-2xl md:text-3xl font-bold mb-2 text-orange-600">
+                Misión
+              </h2>
+              <div class="flex items-center mb-2">
+                <span class="text-yellow-500 text-2xl mr-2">★★★★★</span>
+                <span class="text-sm text-gray-600">5/5</span>
+              </div>
+              <p class="text-base md:text-lg mb-4 text-gray-600 justify-start">
+                Facilitar servicios tecnológicos con el fin de optimizar sus
+                operaciones.
+              </p>
+            </div>
+
+            <!-- Visión -->
+            <div>
+              <h2 class="text-2xl md:text-3xl font-bold mb-2 text-orange-600">
+                Visión
+              </h2>
+              <div class="flex items-center mb-2">
+                <span class="text-yellow-500 text-2xl mr-2">★★★★★</span>
+                <span class="text-sm text-gray-600">5/5</span>
+              </div>
+              <p class="text-base md:text-lg text-gray-600 justify-start">
+                Ser reconocidos como líderes en soluciones tecnológicas
+                innovadoras que impulsen el crecimiento sostenible de nuestros
+                clientes.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="cards w-full md:w-1/2 grid grid-cols-1 sm:grid-cols-2 md:ml-10 gap-4 fade-in"
+        >
+          <div class="card red">
+            <img
+              src="/Cloud-Technologies/public/assets/images/data.jpg"
+              alt="Descripción de la imagen 1"
+              class="image"
+            />
+          </div>
+          <div class="card blue">
+            <img
+              src="/Cloud-Technologies/public/assets/images/datacenter.jpg"
+              alt="Descripción de la imagen 2"
+              class="image"
+            />
+          </div>
+          <div class="card green">
+            <img
+              src="/Cloud-Technologies/public/assets/images/mujer-pc.jpg"
+              alt="Descripción de la imagen 3"
+              class="image"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="relative h-screen flex items-center justify-center bg-cover bg-center text-white" style="background-image: url('/Cloud-Technologies/public/assets/images/equipo.jpg');">
+        <!-- Capa de superposición oscura -->
+        <div class="absolute inset-0 backdrop-blur-sm bg-black opacity-50 "></div>
+    <div class="absolute inset-0 backdrop-blur-sm"></div>
+        <div class="relative text-center  p-10 rounded-lg max-w-xl mx-auto">
+            <!-- Innovación Loader -->
+            <div class="mb-10 fade-in">
+                <div class="loader text-orange-600 flex justify-center gap-2">
+                    <span id="digit1">0</span>
+                    <span id="digit2">0</span>
+                    <span id="digit3">0</span>
+                </div>
+                <p class="text-lg text-gray-300 mt-4 fade-in">+ Innovación</p>
+            </div>
+    
+            <!-- El Equipo -->
+            <div class="mb-6">
+                <h3 class="text-4xl font-bold text-orange-600 fade-in">El Equipo</h3>
+                <p class="text-base text-gray-300 mt-4 max-w-md mx-auto fade-in">
+                    Profesionales con capacidad de innovación, diagnóstico y diseño transversal a las marcas o fabricantes para integrar soluciones aplicadas a las Tecnologías de la Información.
+                </p>
+            </div>
+    
+            <!-- Compromiso -->
+            <div class="text-left max-w-md mx-auto mt-8 fade-in">
+                <div class="commitment text-green-500 flex justify-center gap-2">
+                    <span>&lt;</span>
+                    <span>COMPROMISO 100%</span>
+                    <span>/&gt;</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    </main>
+
+    <div id="chatbot-container"></div>
+    <div id="footer-container" class=""></div>
+    <script src="../../public/js/about.js"></script>
+    <script src="../../public/js/chatBot.js"></script>
+    <script src="../../public/js/main.js"></script>
+  </body>
+</html>
