@@ -1,0 +1,34 @@
+.container2 {
+    max-width: 400px;
+    margin: 50px auto;
+    text-align: center;
+  }
+  
+  .label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #38a169; /* Verde Tailwind */
+    margin-bottom: 10px;
+  }
+  
+  .progress-container2 {
+    width: 100%;
+    background-color: #e2e8f0; /* Gris claro */
+    border-radius: 8px;
+    overflow: hidden;
+    height: 24px;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: #38a169; /* Verde Tailwind para la barra de progreso */
+    color: #ffffff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    transition: width 0.2s ease; /* Transición para animar el ancho */
+  }
+  

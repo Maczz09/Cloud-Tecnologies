@@ -18,3 +18,4 @@ function updateLoader() {
 
 // Iniciar el contador
 updateLoader();
+// Inicia la observación
