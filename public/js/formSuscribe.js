@@ -9,35 +9,31 @@ document.getElementById('form')
   .addEventListener('submit', function(event) {
     event.preventDefault(); 
 
-    btn.textContent = 'Enviando...';
+    btn.value = 'Enviando...';
 
     const serviceID = 'default_service';
-    const templateID = 'template_06tk0mf';
+    const templateID = 'template_dw8c1hv';
 
     emailjs.sendForm(serviceID, templateID, this)
       .then(() => {
-        btn.textContent = 'Enviar';
+        btn.value = 'Suscribir';
 
-        // Configuración para éxito
         modalContent.classList.remove('bg-red-600');
         modalContent.classList.add('bg-orange-600');
-        modalTitle.textContent = '¡Formulario Enviado!';
+        modalTitle.textContent = '¡Gracias por suscribirte!';
         modalTitle.classList.add('text-white');
-        modalMessage.textContent = 'Gracias por tu solicitud. Nos pondremos en contacto contigo pronto.';
-        
-        // Mostrar el modal de confirmación
+        modalMessage.textContent = '¡Gracias por suscribirte al Boletín de Cloud-Tecnologies! Pronto recibirás las mejores noticias, ofertas y mucho más.';
+
         confirmationModal.style.display = 'flex';
       }, (err) => {
-        btn.textContent = 'Enviar';
+        btn.value = 'Suscribir';
 
-        // Configuración para error
         modalContent.classList.remove('bg-orange-600');
         modalContent.classList.add('bg-red-600');
         modalTitle.textContent = 'Error al Enviar';
         modalTitle.classList.add('text-white');
         modalMessage.textContent = 'Hubo un problema al enviar el formulario. Inténtalo nuevamente.';
 
-        // Mostrar el modal de error
         confirmationModal.style.display = 'flex';
       });
   });
@@ -46,4 +42,3 @@ document.getElementById('form')
 closeModalButton.addEventListener('click', () => {
   confirmationModal.style.display = 'none';
 });
-

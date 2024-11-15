@@ -1,27 +1,4 @@
-// Función para cargar un archivo HTML en un elemento específico
-function loadHTML(elementId, filePath) {
-  fetch(filePath)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-      return response.text();
-    })
-    .then(data => {
-      document.getElementById(elementId).innerHTML = data;
-    })
-    .catch(error => console.error('Error al cargar el archivo:', error));
-}
-
-// Cargar header, footer y chatbot al inicio
-document.addEventListener("DOMContentLoaded", function() {
-  loadHTML("header-container", "/Cloud-Technologies/src/components/header.html");
-  loadHTML("footer-container", "/Cloud-Technologies/src/components/footer.html");
-  loadHTML("chatbot-container", "/Cloud-Technologies/src/components/chatBot.html"); // Cargar chatBot
-});
-
-  
-  document.addEventListener("DOMContentLoaded", function () {
+ document.addEventListener("DOMContentLoaded", function () {
     const faders = document.querySelectorAll('.fade-in');
 
     const appearOptions = {

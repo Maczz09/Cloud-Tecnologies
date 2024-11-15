@@ -22,94 +22,267 @@
     </script>
   </head>
   <body class="font-hanken">
-    <div id="header-container" class="sticky top-0 z-50"></div>
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+      <div
+        class="flex flex-col md:flex-row items-center justify-between p-4 mx-auto max-w-7xl"
+      >
+        <!-- Logo -->
+        <a href="../../public/index.html"
+          ><img
+            src="../../public/assets/images/logo.png"
+            alt="Logo"
+            class="h-12 w-auto rounded mb-4 md:mb-0 bg-white"
+        /></a>
 
+        <!-- Botón Hamburguesa -->
+        <button id="menu-btn" class="block md:hidden focus:outline-none">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+
+        <!-- Navigation -->
+        <nav
+          id="menu"
+          class="hidden md:flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 mb-4 md:mb-0"
+        >
+          <a
+            href="../../public/index.html"
+            class="smky-btn3 relative hover:text-white py-2 px-6 after:absolute after:h-1 after:hover:h-[200%] transition-all duration-500 after:transition-all after:duration-500 overflow-hidden z-20 after:z-[-20] after:bg-orange-600 after:rounded-t-full after:w-full after:bottom-0 after:left-0 text-black"
+            >Inicio</a
+          >
+          <a
+            href="about.html"
+            class="smky-btn3 relative hover:text-white py-2 px-6 after:absolute after:h-1 after:hover:h-[200%] transition-all duration-500 after:transition-all after:duration-500 overflow-hidden z-20 after:z-[-20] after:bg-orange-600 after:rounded-t-full after:w-full after:bottom-0 after:left-0 text-black"
+            >Nosotros</a
+          >
+          <a
+            href="services.html"
+            class="smky-btn3 relative hover:text-white py-2 px-6 after:absolute after:h-1 after:hover:h-[200%] transition-all duration-500 after:transition-all after:duration-500 overflow-hidden z-20 after:z-[-20] after:bg-orange-600 after:rounded-t-full after:w-full after:bottom-0 after:left-0 text-black"
+            >Servicios</a
+          >
+        </nav>
+
+        <!-- Buttons -->
+        <div
+          id="auth-buttons"
+          class="hidden md:flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4"
+        >
+          <a href="contact.html">
+            <button
+              class="overflow-hidden relative w-36 p-2 h-10 bg-white text-[#1B0942] border-none rounded-md text-lg font-bold cursor-pointer z-10 group"
+            >
+              Cotizar
+              <span
+                class="absolute w-40 h-36 -top-8 -left-3 bg-orange-200 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-bottom"
+              ></span>
+              <span
+                class="absolute w-40 h-36 -top-8 -left-3 bg-orange-400 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-bottom"
+              ></span>
+              <span
+                class="absolute w-40 h-36 -top-8 -left-3 bg-orange-600 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-bottom"
+              ></span>
+              <span
+                class="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute top-2 left-4 z-10 text-[#1B0942] text-lg font-bold"
+              >
+                ¡Empecemos!</span
+              >
+            </button>
+          </a>
+        </div>
+      </div>
+    </header>
     <main class="bg-orange-50">
       <section class="flex items-center justify-center min-h-screen">
-        <div class="w-full max-w-lg p-8 ">
-          <h2 class="text-2xl font-semibold text-center text-orange-600 mb-4">Formulario de Cotización</h2>
-          <p class="text-center text-gray-600 mb-6">Ingresa los datos a continuación y uno de nuestros ejecutivos se pondrá en contacto para darle curso a tu solicitud de cotización sobre alguno de nuestros servicios disponibles.</p>
-          
+        <div class="w-full max-w-lg p-8">
+          <h2 class="text-2xl font-semibold text-center text-orange-600 mb-4">
+            FORMULARIO DE COTIZACIÓN
+          </h2>
+          <p class="text-center text-gray-600 mb-6">
+            Ingresa los datos a continuación y uno de nuestros ejecutivos se
+            pondrá en contacto para darle curso a tu solicitud de cotización
+            sobre alguno de nuestros servicios disponibles.
+          </p>
+
           <form id="form" class="space-y-4">
             <!-- Área de servicio a cotizar -->
             <div>
-              <label class="block text-gray-700">Área de servicio a cotizar*</label>
-              <input type="text" name="service_area" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-orange-600" placeholder="Especifica el área de servicio" required>
+              <label class="block text-orange-600"
+                >Área de servicio a cotizar *</label
+              >
+              <input
+                type="text"
+                name="service_area"
+                class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-orange-600"
+                placeholder="Especifica el área de servicio"
+                required
+              />
             </div>
-      
+
             <!-- Nombre completo y Correo electrónico -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label class="block text-gray-700">Nombre completo*</label>
-                <input type="text" name="full_name" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-orange-600" required>
+                <label class="block text-orange-600">Nombre completo *</label>
+                <input
+                  type="text"
+                  name="full_name"
+                  class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-orange-600"
+                  required
+                />
               </div>
               <div>
-                <label class="block text-gray-700">Correo electrónico*</label>
-                <input type="email" name="email" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-orange-600" required>
+                <label class="block text-orange-600"
+                  >Correo electrónico *</label
+                >
+                <input
+                  type="email"
+                  name="email"
+                  class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-orange-600"
+                  required
+                />
               </div>
             </div>
-      
+
             <!-- Empresa y Teléfono -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label class="block text-gray-700">Empresa*</label>
-                <input type="text" name="company" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-orange-600" required>
+                <label class="block text-orange-600">Empresa *</label>
+                <input
+                  type="text"
+                  name="company"
+                  class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-orange-600"
+                  required
+                />
               </div>
               <div>
-                <label class="block text-gray-700">Teléfono*</label>
-                <input type="tel" name="phone" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-orange-600" required>
+                <label class="block text-orange-600">Teléfono *</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-orange-600"
+                  required
+                />
               </div>
             </div>
-      
+
             <!-- RUC -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label class="block text-gray-700">RUC*</label>
-                <input type="text" name="ruc" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-orange-600" required>
+                <label class="block text-orange-600">RUC *</label>
+                <input
+                  type="text"
+                  name="ruc"
+                  class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-orange-600"
+                  required
+                />
               </div>
             </div>
-      
+
             <!-- Comentarios -->
             <div>
-              <label class="block text-gray-700">Comentarios</label>
-              <textarea type="text" name="comments" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-orange-600" placeholder="Comentarios adicionales"></textarea>
+              <label class="block text-orange-600">Comentarios *</label>
+              <textarea
+                type="text"
+                name="comments"
+                class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-orange-600"
+                placeholder="Comentarios adicionales"
+                required
+              ></textarea>
             </div>
-      
+
             <!-- Suscripción -->
             <div>
-              <label class="block text-gray-700">Deseo recibir material promocional</label>
-              <input type="text" name="subscribe" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-orange-600" placeholder="Sí o No">
+              <label class="block text-orange-600"
+                >Deseo recibir material promocional</label
+              >
+              <input
+                type="text"
+                name="subscribe"
+                class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-orange-600"
+                placeholder="Sí o No"
+              />
             </div>
-      
+
             <!-- Año actual -->
             <div>
-              <label class="block text-gray-700">Año actual</label>
-              <input type="text" name="current_year" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-orange-600" placeholder="2023" required>
+              <label class="block text-orange-600">Año actual</label>
+              <input
+                type="text"
+                name="current_year"
+                class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-orange-600"
+                placeholder="2023"
+                required
+              />
             </div>
-      
+
             <!-- Botón de envío -->
             <div class="flex justify-start mt-4">
-              <button type="submit" id="button" class="w-[20%] bg-orange-600 text-white py-2 rounded-lg font-semibold hover:bg-orange-700 focus:outline-none focus:ring-2 focus:border-orange-600 focus:ring-opacity-50">Enviar</button>
+              <button
+                type="submit"
+                id="button"
+                class="w-[20%] bg-orange-600 text-white py-2 rounded-lg font-semibold hover:bg-orange-700 focus:outline-none focus:ring-2 focus:border-orange-600 focus:ring-opacity-50"
+              >
+                Enviar
+              </button>
             </div>
           </form>
         </div>
       </section>
-      
+
       <!-- Modal de Confirmación -->
-      <div id="confirmationModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center" style="display: none;">
-        <div id="modalContent" class="bg-orange-50 rounded-lg p-6 w-1/3 text-center">
+      <div
+        id="confirmationModal"
+        class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center"
+        style="display: none"
+      >
+        <div
+          id="modalContent"
+          class="bg-orange-50 rounded-lg p-6 w-1/3 text-center"
+        >
           <h2 id="modalTitle" class="text-2xl font-semibold mb-4"></h2>
-          <p id="modalMessage" class="text-gray-600"></p>
-          <button id="closeModalButton" class="mt-6 py-2 px-4 rounded-lg text-ellipsis text-orange-600 focus:outline-none">Cerrar</button>
+          <p id="modalMessage" class="text-white"></p>
+          <button
+            id="closeModalButton"
+            class="mt-6 py-2 px-4 rounded-lg text-ellipsis text-white focus:outline-none"
+          >
+            Cerrar
+          </button>
         </div>
       </div>
-      
-      
     </main>
-    <div id="chatbot-container"></div>
-    <div id="footer-container" class=""></div>
+    <div>
+      <iframe
+        id="iframeId"
+        src="https://www.stack-ai.com/embed/58c6d093-8177-4e80-bdee-682f7f423925/67600dc0-4e3c-4ebd-814e-fb67ae06aa50/6734fe1bfb2b67a6b93d2984"
+        frameborder="0"
+        style="
+          position: fixed;
+          z-index: 1;
+          bottom: 25px;
+          right: 25px;
+          border-radius: 10px;
+          box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+          overflow: hidden;
+          transition: width 0.3s ease, height 0.3s ease;
+          width: 100%;
+          height: 100%;
+          max-width: 450px;
+          max-height: 625px;
+        "
+      ></iframe>
+    </div>
     <script src="../../public/js/formContact.js"></script>
     <script src="../../public/js/chatBot.js"></script>
-    <script src="../../public/js/main.js"></script>
   </body>
 </html>
