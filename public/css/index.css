@@ -1,32 +1,45 @@
-@keyframes fadeInLeft {
+@keyframes bounceInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-30px);
+    transform: translateX(-50px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(10px);
+  }
+  80% {
+    transform: translateX(-5px);
   }
   100% {
-    opacity: 1;
     transform: translateX(0);
   }
 }
 
-@keyframes fadeInRight {
+@keyframes bounceInRight {
   0% {
     opacity: 0;
-    transform: translateX(30px);
+    transform: translateX(50px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(-10px);
+  }
+  80% {
+    transform: translateX(5px);
   }
   100% {
-    opacity: 1;
     transform: translateX(0);
   }
 }
 
-.fade-in-left {
-  animation: fadeInLeft 1.5s ease-out forwards;
+.bounce-in-left {
+  animation: bounceInLeft 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
 }
 
-.fade-in-right {
-  animation: fadeInRight 1.5s ease-out forwards;
+.bounce-in-right {
+  animation: bounceInRight 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
 }
+
 
 .carousel-track img:hover {
   transform: scale(1.1) rotate(10deg);
