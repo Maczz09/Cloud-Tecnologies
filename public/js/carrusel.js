@@ -1,47 +1,44 @@
-// Lista de URLs de tus imágenes de partners
-const partners = [
-    './assets/partners/checkpoint.png',
-    './assets/partners/aruba.png',
-    './assets/partners/attackSimulator.png',
-    './assets/partners/extreme.png',
-    './assets/partners/fortinet.png',
-    './assets/partners/hewlettPackardEnterprise.png',
-    './assets/partners/hillstone.png',
-    './assets/partners/huawei.png',
-    './assets/partners/imperva.png',
-    './assets/partners/kemp.png',
-    './assets/partners/paloalto.png',
-    './assets/partners/proofpoint.png',
-    './assets/partners/ridge.jpg',
-    './assets/partners/sonicWall.png',
-    './assets/partners/sophos.png',
-    './assets/partners/tsplus.png',
-    './assets/partners/veeam.png',
-    './assets/partners/vmware.png'
-];
 
-// Selecciona el contenedor del carrusel
-const carouselContainer = document.getElementById('carousel');
+  // Lista de URLs de tus imágenes
+  const partners = [
+    'public/assets/partners/checkpoint.png',
+    'public/assets/partners/aruba.png',
+    'public/assets/partners/attackSimulator.png',
+    'public/assets/partners/extreme.png',
+    'public/assets/partners/fortinet.png',
+    'public/assets/partners/hewlettPackardEnterprise.png',
+    'public/assets/partners/hillstone.png',
+    'public/assets/partners/huawei.png',
+    'public/assets/partners/imperva.png',
+    'public/assets/partners/kemp.png',
+    'public/assets/partners/paloalto.png',
+    'public/assets/partners/proofpoint.png',
+    'public/assets/partners/ridge.jpg',
+    'public/assets/partners/sonicWall.png',
+    'public/assets/partners/sophos.png',
+    'public/assets/partners/tsplus.png',
+    'public/assets/partners/veeam.png',
+    'public/assets/partners/vmware.png'
+  ];
 
-// Inserta las imágenes dos veces para crear un efecto continuo
-function populateCarousel() {
-    partners.forEach(src => {
-        const img = document.createElement('img');
-        img.src = src;
-        img.alt = "Partner Logo";
-        img.classList.add('partner-logo');
-        carouselContainer.appendChild(img);
-    });
+  const carousel = document.getElementById('carousel');
 
-    // Repite las imágenes para el efecto continuo
-    partners.forEach(src => {
-        const img = document.createElement('img');
-        img.src = src;
-        img.alt = "Partner Logo";
-        img.classList.add('partner-logo');
-        carouselContainer.appendChild(img);
-    });
-}
+  // Generar elementos de imagen con tamaño fijo
+  partners.forEach((url) => {
+    const img = document.createElement('img');
+    img.src = url;
+    img.alt = "Partner Logo";
+    img.className = "h-24 w-40"; // Tamaño uniforme para todas las imágenes
+    carousel.appendChild(img);
+  });
 
-// Llama a la función para poblar el carrusel
-populateCarousel();
+  // Duplicar imágenes para crear un efecto infinito
+  partners.forEach((url) => {
+    const img = document.createElement('img');
+    img.src = url;
+    img.alt = "Partner Logo";
+    img.className = "h-24 w-40"; // Tamaño uniforme
+    carousel.appendChild(img);
+  });
+
+

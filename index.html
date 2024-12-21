@@ -7,9 +7,19 @@
     </head>
     <link rel="stylesheet" href="public/css/nav.css">
     <link rel="stylesheet" href="public/css/chatBotEstilos.css" />
+    <link rel="stylesheet" href="public/css/carrusel.css">
+    <link rel="stylesheet" href="public/css/card.css">
+    <link rel="icon" type="image/png" href="/public/assets/images/logo.png">
+    <link rel="stylesheet" href="public/css/animaciones.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="public/css/index.css" />
+    <link rel="stylesheet" href="public/css/animacionModal.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine-ie11.min.js"
+        defer></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
@@ -20,6 +30,11 @@
     <script type="text/javascript">
     emailjs.init("ckLOSZGM7mrkvDu18");
   </script>
+    <style>
+    [x-cloak] { 
+        display: none !important; 
+    }
+</style>
     <body>
         <header class="font-hanken">
             <a class="logo">
@@ -35,61 +50,90 @@
         </header>
 
         <main class="font-hanken main-content">
-            <section class="relative w-full">
-                <div class="relative w-full bg-cover bg-center min-h-screen md:h-screen flex items-center justify-center"
-                    style="background-image: url('public/assets/images/main.jpg')">
-                    <div class="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm"></div>
             
+            <section class="relative w-full">
+                <div
+                    class="relative w-full bg-cover bg-center min-h-screen md:h-screen flex items-center justify-center"
+                    style="background-image: url('public/assets/images/main.jpg')">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm"></div>
+
                     <div class="relative w-full max-w-6xl mx-auto px-4">
                         <div class="grid md:grid-cols-2 gap-8">
-                            <div class="text-center md:text-start flex flex-col justify-center bounce-in-left py-12 lg:py-0">
-                                <h1 class="text-4xl md:text-6xl font-extrabold text-orange-600 leading-tight mb-6">
-                                    FORTALECE TU ESCUDO <br /> DIGITAL PROTEGIENDO<br /> TU MUNDO EN LINEA
+                            <div
+                                class="text-center md:text-start flex flex-col justify-center bounce-in-left py-12 lg:py-0">
+                                <h1
+                                    class="text-4xl md:text-6xl font-extrabold text-orange-600 leading-tight mb-6">
+                                    FORTALECE TU ESCUDO <br /> DIGITAL
+                                    PROTEGIENDO<br /> TU MUNDO EN LINEA
                                 </h1>
-                                <p class="text-xl md:text-2xl text-gray-200 mb-10">
+                                <p
+                                    class="text-xl md:text-2xl text-gray-200 mb-10">
                                     Tu Seguridad, Nuestra Prioridad.
                                 </p>
-                                <div class="flex justify-center md:justify-start">
+                                <div
+                                    class="flex justify-center md:justify-start">
                                     <a href="../src/pages/contact.html">
-                                        <button class="px-8 py-4 bg-orange-600 text-white text-xl font-semibold rounded-full shadow-lg hover:bg-orange-700 transition duration-300">
+                                        <button
+                                            class="px-8 py-4 bg-orange-600 text-white text-xl font-semibold rounded-full shadow-lg hover:bg-orange-700 transition duration-300">
                                             ¡Empecemos!
                                         </button>
                                     </a>
                                 </div>
                             </div>
-            
-                            <div class="hidden sm:block w-full max-w-md mx-auto bounce-in-right">
-                                <form action="/submit-contact" method="POST" class="bg-black bg-opacity-80 p-8 rounded-lg space-y-4">
-                                    <h2 class="text-2xl font-bold text-orange-600 mb-6 text-center">
+
+                            <div
+                                class="hidden sm:block w-full max-w-md mx-auto bounce-in-right">
+                                <form action="/submit-contact" method="POST"
+                                    class="bg-black bg-opacity-80 p-8 rounded-lg space-y-4">
+                                    <h2
+                                        class="text-2xl font-bold text-orange-600 mb-6 text-center">
                                         Contacta con un asesor
                                     </h2>
-                                    <p class="text-white text-sm mb-6 text-center">
-                                        Ingresa los datos de tu empresa RUC 20 y un asesor de negocios se
+                                    <p
+                                        class="text-white text-sm mb-6 text-center">
+                                        Ingresa los datos de tu empresa RUC 20 y
+                                        un asesor de negocios se
                                         comunicará contigo para ayudarte
                                     </p>
                                     <div>
-                                        <label for="name" class="sr-only">Nombres</label>
-                                        <input type="text" id="name" name="name" required placeholder="Nombres"
+                                        <label for="name"
+                                            class="sr-only">Nombres</label>
+                                        <input type="text" id="name" name="name"
+                                            required placeholder="Nombres"
                                             class="w-full px-4 py-3 rounded-md bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-600" />
                                     </div>
                                     <div>
-                                        <label for="lastname" class="sr-only">Apellidos</label>
-                                        <input type="text" id="lastname" name="lastname" required placeholder="Apellidos"
+                                        <label for="lastname"
+                                            class="sr-only">Apellidos</label>
+                                        <input type="text" id="lastname"
+                                            name="lastname" required
+                                            placeholder="Apellidos"
                                             class="w-full px-4 py-3 rounded-md bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-600" />
                                     </div>
                                     <div>
-                                        <label for="ruc" class="sr-only">RUC 20</label>
-                                        <input type="text" id="ruc" name="ruc" pattern="20\d{11}" required placeholder="RUC 20"
+                                        <label for="ruc" class="sr-only">RUC
+                                            20</label>
+                                        <input type="text" id="ruc" name="ruc"
+                                            pattern="20\d{11}" required
+                                            placeholder="RUC 20"
                                             class="w-full px-4 py-3 rounded-md bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-600" />
                                     </div>
                                     <div>
-                                        <label for="phone" class="sr-only">Teléfono / Celular</label>
-                                        <input type="tel" id="phone" name="phone" required placeholder="Teléfono / Celular"
+                                        <label for="phone"
+                                            class="sr-only">Teléfono /
+                                            Celular</label>
+                                        <input type="tel" id="phone"
+                                            name="phone" required
+                                            placeholder="Teléfono / Celular"
                                             class="w-full px-4 py-3 rounded-md bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-600" />
                                     </div>
                                     <div>
-                                        <label for="email" class="sr-only">Email</label>
-                                        <input type="email" id="email" name="email" required placeholder="Email"
+                                        <label for="email"
+                                            class="sr-only">Email</label>
+                                        <input type="email" id="email"
+                                            name="email" required
+                                            placeholder="Email"
                                             class="w-full px-4 py-3 rounded-md bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-600" />
                                     </div>
                                     <button type="submit"
@@ -101,40 +145,55 @@
                         </div>
                     </div>
                 </div>
-            
+
                 <div class="md:hidden w-full bg-gray-100 py-12 px-4">
                     <div class="w-full max-w-md mx-auto">
-                        <form action="/submit-contact" method="POST" class="bg-black bg-opacity-80 p-8 rounded-lg space-y-4">
-                            <h2 class="text-2xl font-bold text-orange-600 mb-6 text-center">
+                        <form action="/submit-contact" method="POST"
+                            class="bg-black bg-opacity-80 p-8 rounded-lg space-y-4">
+                            <h2
+                                class="text-2xl font-bold text-orange-600 mb-6 text-center">
                                 Contacta con un asesor
                             </h2>
                             <p class="text-white text-sm mb-6 text-center">
-                                Ingresa los datos de tu empresa RUC 20 y un asesor de negocios se
+                                Ingresa los datos de tu empresa RUC 20 y un
+                                asesor de negocios se
                                 comunicará contigo para ayudarte
                             </p>
                             <div>
-                                <label for="name-mobile" class="sr-only">Nombres</label>
-                                <input type="text" id="name-mobile" name="name" required placeholder="Nombres"
+                                <label for="name-mobile"
+                                    class="sr-only">Nombres</label>
+                                <input type="text" id="name-mobile" name="name"
+                                    required placeholder="Nombres"
                                     class="w-full px-4 py-3 rounded-md bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-600" />
                             </div>
                             <div>
-                                <label for="lastname-mobile" class="sr-only">Apellidos</label>
-                                <input type="text" id="lastname-mobile" name="lastname" required placeholder="Apellidos"
+                                <label for="lastname-mobile"
+                                    class="sr-only">Apellidos</label>
+                                <input type="text" id="lastname-mobile"
+                                    name="lastname" required
+                                    placeholder="Apellidos"
                                     class="w-full px-4 py-3 rounded-md bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-600" />
                             </div>
                             <div>
-                                <label for="ruc-mobile" class="sr-only">RUC 20</label>
-                                <input type="text" id="ruc-mobile" name="ruc" pattern="20\d{11}" required placeholder="RUC 20"
+                                <label for="ruc-mobile" class="sr-only">RUC
+                                    20</label>
+                                <input type="text" id="ruc-mobile" name="ruc"
+                                    pattern="20\d{11}" required
+                                    placeholder="RUC 20"
                                     class="w-full px-4 py-3 rounded-md bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-600" />
                             </div>
                             <div>
-                                <label for="phone-mobile" class="sr-only">Teléfono / Celular</label>
-                                <input type="tel" id="phone-mobile" name="phone" required placeholder="Teléfono / Celular"
+                                <label for="phone-mobile"
+                                    class="sr-only">Teléfono / Celular</label>
+                                <input type="tel" id="phone-mobile" name="phone"
+                                    required placeholder="Teléfono / Celular"
                                     class="w-full px-4 py-3 rounded-md bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-600" />
                             </div>
                             <div>
-                                <label for="email-mobile" class="sr-only">Email</label>
-                                <input type="email" id="email-mobile" name="email" required placeholder="Email"
+                                <label for="email-mobile"
+                                    class="sr-only">Email</label>
+                                <input type="email" id="email-mobile"
+                                    name="email" required placeholder="Email"
                                     class="w-full px-4 py-3 rounded-md bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-600" />
                             </div>
                             <button type="submit"
@@ -145,7 +204,187 @@
                     </div>
                 </div>
             </section>
+            <section class="scroll-section">
+                <div
+                    class="bg-orange-400 py-8 flex items-center justify-between px-8">
+                    <!-- Texto -->
+                    <div
+                        class="text-white text-bold text-2xl font-bold w-1/3 fade-in-left-2 hidden2">
+                        <p>Nuestros Patrocinadores</p>
+                    </div>
 
+                    <!-- Carrusel -->
+                    <div
+                        class="relative w-2/3 overflow-hidden fade-in-right-2 hidden2">
+                        <!-- Efecto desvanecido a los lados -->
+                        <div
+                            class="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-orange-400 via-orange-400 to-transparent z-10"></div>
+                        <div
+                            class="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-orange-400 via-orange-400 to-transparent z-10"></div>
+
+                        <div id="carousel"
+                            class="flex gap-8 items-center animate-scroll">
+                            <!-- Las imágenes se generarán dinámicamente con JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section
+                class="py-16 px-4 bg-gradient-to-br  scroll-section"
+                x-data="{ 
+                 open: false,
+                 initBubble($el, button) {
+                     const rect = button.getBoundingClientRect();
+                     $el.style.setProperty('--bubble-x', rect.left + 'px');
+                     $el.style.setProperty('--bubble-y', rect.top + 'px');
+                 }
+              }">
+                <div class="max-w-6xl mx-auto">
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <!-- Video -->
+                        <div class="relative w-full max-w-4xl mx-auto">
+                            <div
+                                class="absolute inset-0 bg-orange-600 rounded-lg transform rotate-3 scale-105"></div>
+                            <div class="relative">
+                                <iframe
+                                    src="https://www.youtube.com/embed/onh8e4dORWM?si=YHMaBQz_qyfkMV6-"
+                                    title="YouTube video player"
+                                    frameborder="0"
+                                    class="rounded-lg shadow-2xl w-full fade-in-left-video hidden2"
+                                    style="aspect-ratio: 16 / 9;"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen>
+                                </iframe>
+
+                            </div>
+                        </div>
+
+                        <!-- Contenido -->
+                        <div class="space-y-6 fade-in-up-text hidden2">
+                            <h2
+                                class="text-4xl font-bold text-gray-800 leading-tight">
+                                Seguridad en los <span
+                                    class="text-orange-600">Centros de
+                                    Datos</span>: Protege la Información
+                            </h2>
+                            <p class="text-lg text-gray-600">
+                                Protege a tu empresa al mismo tiempo que adoptas
+                                nuevas tecnologías que te permitan garantizar
+                                las operaciones comerciales.
+                            </p>
+                            <div class="flex space-x-4 items-center">
+                                <button
+                                    @click="open = true; $nextTick(() => initBubble($refs.modal, $el))"
+                                    class="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg flex items-center gap-2 transition duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="h-5 w-5" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    Más Información
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal con efecto burbuja -->
+                <div x-show="open"
+                    x-cloak
+                    class="fixed inset-0 modal-overlay flex items-center justify-center p-4 z-50"
+                    :class="{ 'active': open }"
+                    x-transition:leave="transition ease-in duration-200">
+
+                    <div x-ref="modal"
+                        class="bg-white modal-bubble max-w-2xl w-full p-6 relative"
+                        :class="{ 'active': open }"
+                        @click.away="open = false">
+
+                        <button @click="open = false"
+                            class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+
+                        <div class="space-y-4">
+                            <h3 class="text-2xl font-bold text-orange-600">
+                                Seguridad Integral para tu Empresa
+                            </h3>
+                            <div class="text-gray-600 space-y-4">
+                                <p>
+                                    Ofrecemos soluciones completas de seguridad
+                                    para centros de datos que protegen
+                                    tu información crítica y garantizan la
+                                    continuidad de tus operaciones comerciales.
+                                </p>
+                                <p>Nuestras soluciones incluyen:</p>
+                                <ul class="list-disc pl-6 space-y-2">
+                                    <li>Protección contra amenazas
+                                        avanzadas</li>
+                                    <li>Monitoreo 24/7 de la
+                                        infraestructura</li>
+                                    <li>Respaldo y recuperación de datos</li>
+                                    <li>Cumplimiento normativo y
+                                        certificaciones</li>
+                                </ul>
+                            </div>
+                            <div class="mt-6 flex justify-end">
+                                <a href="#contacto"
+                                    class="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg transition duration-300"
+                                    @click="open = false">
+                                    ¡Contáctenos Ahora!
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="mt-12 mb-12 scroll-section">
+
+                <div
+                    class="grid grid-cols-4 grid-rows-2 gap-4 fade-in-up-text hidden2 card-container">
+                    <div class="col-span-2 row-span-2 col-start-2">
+                        <div class="card">
+                            <img src="public/assets/images/calidad.jpg" alt
+                                class="img_principal">
+                            <div class="card__content">
+                                <p
+                                    class="card__title text-orange-600">Soluciones
+                                    a Medida para Nuevos Retos</p>
+                                <p class="card__description">
+                                    Confíe en manos expertas para superar
+                                    desafíos. Ofrecemos estrategias
+                                    innovadoras adaptadas a su negocio,
+                                    ayudándole a <span
+                                        class="text-orange-600">crecer</span>,
+                                    <span
+                                        class="text-orange-600">adaptarse</span>
+                                    y afrontar los <span
+                                        class="text-orange-600">retos
+                                        sociales</span> del futuro.
+                                </p>
+                                <!-- Nueva imagen debajo del texto -->
+                                <div class="mt-6 image-container">
+                                    <img
+                                        src="public/assets/images/service_cybersecurity.jpg"
+                                        alt="Estrategia y crecimiento"
+                                        class=" img-secondary">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </section>
             <section>
                 <footer class="shadow-lg relative bg-white">
                     <div class="container px-6 py-12 mx-auto">
@@ -296,4 +535,5 @@
             <script src="public/js/chatBot.js"></script>
             <script src="public/js/carrusel.js"></script>
             <script src="public/js/main.js"></script>
+            <script src="public/js/manejoAnimaciones.js"></script>
         </html>
