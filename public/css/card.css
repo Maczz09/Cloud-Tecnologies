@@ -162,7 +162,7 @@
 /* Móviles pequeños */
 @media (max-width: 480px) {
     .card {
-        width: 80%; /* Mantiene el 80% del ancho en móviles pequeños */
+        width: 90%; /* Mantiene el 80% del ancho en móviles pequeños */
         aspect-ratio: 16 / 9;
         border-radius: 10px;
     }
