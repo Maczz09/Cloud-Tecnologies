@@ -3,10 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Servicios</title>
+    <link rel="stylesheet" href="../../public/css/nav.css">
+    <link rel="stylesheet" href="../../public/css/animaciones.css">
     <link rel="stylesheet" href="../../public/css/output.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <style>
+      .service-image {
+        aspect-ratio: 1/1;
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+      }
+      
+      @media (max-width: 768px) {
+        .service-image {
+          max-width: 220px;
+        }
+      }
+ 
+    </style>
     <link
       href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
@@ -23,87 +40,18 @@
     <link rel="stylesheet" href="../../public/css/index.css" />
   </head>
   <body class="font-hanken">
-    <header class="bg-white shadow-lg sticky top-0 z-50">
-      <div
-        class="flex flex-col md:flex-row items-center justify-between p-4 mx-auto max-w-7xl"
-      >
-        <!-- Logo -->
-        <a href="../../public/index.html"
-          ><img
-            src="../../public/assets/images/logo.png"
-            alt="Logo"
-            class="h-12 w-auto rounded mb-4 md:mb-0 bg-white"
-        /></a>
-
-        <!-- Botón Hamburguesa -->
-        <button id="menu-btn" class="block md:hidden focus:outline-none">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16m-7 6h7"
-            />
-          </svg>
-        </button>
-
-        <!-- Navigation -->
-        <nav
-          id="menu"
-          class="hidden md:flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 mb-4 md:mb-0"
-        >
-          <a
-            href="../../public/index.html"
-            class="smky-btn3 relative hover:text-white py-2 px-6 after:absolute after:h-1 after:hover:h-[200%] transition-all duration-500 after:transition-all after:duration-500 overflow-hidden z-20 after:z-[-20] after:bg-orange-600 after:rounded-t-full after:w-full after:bottom-0 after:left-0 text-black"
-            >Inicio</a
-          >
-          <a
-            href="about.html"
-            class="smky-btn3 relative hover:text-white py-2 px-6 after:absolute after:h-1 after:hover:h-[200%] transition-all duration-500 after:transition-all after:duration-500 overflow-hidden z-20 after:z-[-20] after:bg-orange-600 after:rounded-t-full after:w-full after:bottom-0 after:left-0 text-black"
-            >Nosotros</a
-          >
-          <a
-            href="services.html"
-            class="smky-btn3 relative hover:text-white py-2 px-6 after:absolute after:h-1 after:hover:h-[200%] transition-all duration-500 after:transition-all after:duration-500 overflow-hidden z-20 after:z-[-20] after:bg-orange-600 after:rounded-t-full after:w-full after:bottom-0 after:left-0 text-black"
-            >Servicios</a
-          >
-        </nav>
-
-        <!-- Buttons -->
-        <div
-          id="auth-buttons"
-          class="hidden md:flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4"
-        >
-          <a href="contact.html">
-            <button
-              class="overflow-hidden relative w-36 p-2 h-10 bg-white text-[#1B0942] border-none rounded-md text-lg font-bold cursor-pointer z-10 group"
-            >
-              Cotizar
-              <span
-                class="absolute w-40 h-36 -top-8 -left-3 bg-orange-200 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-bottom"
-              ></span>
-              <span
-                class="absolute w-40 h-36 -top-8 -left-3 bg-orange-400 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-bottom"
-              ></span>
-              <span
-                class="absolute w-40 h-36 -top-8 -left-3 bg-orange-600 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-bottom"
-              ></span>
-              <span
-                class="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute top-2 left-4 z-10 text-[#1B0942] text-lg font-bold"
-              >
-                ¡Empecemos!</span
-              >
-            </button>
-          </a>
-        </div>
-      </div>
-    </header>
+    <header class="font-hanken">
+      <a class="logo">
+          <img src="../../public/assets/images/logo.png" alt>
+      </a>
+      <nav>
+          <ul class="font-bold">
+              <li><a href="../../index.html">Inicio</a></li>
+              <li><a href="about.html">Nosotros</a></li>
+              <li><a href="services.html">Servicios</a></li>
+          </ul>
+      </nav>
+  </header>
 
     <main>
       <section>
@@ -189,186 +137,58 @@
           </button>
         </div>
       </section>
-      <section class="items-center gap-8 px-8 py-16 bg-orange-50">
+      <section class="scroll-section items-center gap-8 px-8 py-16 bg-orange-50 ">
         <div>
           <h2
-            class="text-4xl font-bold text-orange-600 mb-4 pb-6 justify-center fade-in"
+            class="text-4xl font-bold text-orange-600 mb-4 pb-6 justify-center text-center fade-in-up-text hidden2"
           >
             SERVICIOS
           </h2>
         </div>
-        <div
-          class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 fade-in"
-        >
-          <div
-            class="card bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out"
-          >
-            <div
-              class="card-image-container bg-gray-300 flex items-center justify-center rounded-md h-40 mb-4 overflow-hidden"
-            >
-              <img
-                src="../../public/assets/images/nube.jpg"
-                alt="Computación en la Nube"
-                class="object-cover h-full w-full"
-              />
+        <div class="max-w-7xl mx-auto ">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+            <div class="flex flex-col items-center space-y-4 fade-in-up-text hidden2">
+              <div class="rounded-full overflow-hidden bg-gray-700 service-image ">
+                <img src="../../public/assets/images/nube.jpg" alt="Cloud Computing" class="w-full h-full object-cover ">
+              </div>
+              <h3 class="text-lg md:text-xl text-orange-600 font-bold text-center px-4">Computación en la Nube</h3>
             </div>
-            <h2 class="text-lg font-bold text-orange-600 mb-2">
-              Computación en la Nube
-            </h2>
-            <p class="text-gray-500 text-sm mb-4 justify-start text-justify">
-              Gestión de soluciones en plataformas líderes como Huawei Cloud,
-              proporcionando flexibilidad, escalabilidad y seguridad.
-            </p>
-            <a href="./contact.html">
-              <button
-                class="px-4 py-2 bg-orange-600 text-white rounded-md hover:bg-orange-700 transition"
-              >
-                Cotizar
-              </button>
-            </a>
-          </div>
-
-          <div
-            class="card bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out"
-          >
-            <div
-              class="card-image-container bg-gray-300 flex items-center justify-center rounded-md h-40 mb-4 overflow-hidden"
-            >
-              <img
-                src="../../public/assets/images/capex.jpg"
-                alt="Infraestructura en modo CAPEX u OPEX"
-                class="object-cover h-full w-full"
-              />
+      
+            <div class="flex flex-col items-center space-y-4 fade-in-up-text hidden2">
+              <div class="rounded-full overflow-hidden bg-gray-700 service-image" >
+                <img src="../../public/assets/images/capex.jpg" alt="Infrastructure" class="w-full h-full object-cover 
+                ">
+              </div>
+              <h3 class="text-lg md:text-xl text-orange-600 font-bold text-center px-4">Infraestructura en modo CAPEX u OPEX</h3>
             </div>
-            <h2 class="text-lg font-bold text-orange-600 mb-2">
-              Infraestructura en modo CAPEX u OPEX
-            </h2>
-            <p class="text-gray-500 text-sm mb-4 justify-start text-justify">
-              Provisión integral de infraestructura de almacenamiento, redes,
-              servidores, conectividad de red y monitoreo para soportar un
-              Centro de Datos.
-            </p>
-            <a href="./contact.html">
-              <button
-                class="px-4 py-2 bg-orange-600 text-white rounded-md hover:bg-orange-700 transition"
-              >
-                Cotizar
-              </button>
-            </a>
-          </div>
-
-          <div
-            class="card bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out"
-          >
-            <div
-              class="card-image-container bg-gray-300 flex items-center justify-center rounded-md h-40 mb-4 overflow-hidden"
-            >
-              <img
-                src="../../public/assets/images/service_cybersecurity.jpg"
-                alt="Servicios de Ciberseguridad"
-                class="object-cover h-full w-full"
-              />
+      
+            <div class="flex flex-col items-center space-y-4 fade-in-up-text hidden2">
+              <div class="rounded-full overflow-hidden bg-gray-700 service-image">
+                <img src="../../public/assets/images/service_cybersecurity.jpg" alt="Cybersecurity" class="w-full h-full object-cover ">
+              </div>
+              <h3 class="text-lg md:text-xl text-orange-600 font-bold text-center px-4">Servicios de Ciberseguridad</h3>
             </div>
-            <h2 class="text-lg font-bold text-orange-600 mb-2">
-              Servicios de Ciberseguridad
-            </h2>
-            <p class="text-gray-500 text-sm mb-4 justify-start text-justify">
-              Desde el diagnóstico hasta la implementación de soluciones para
-              proteger la integridad, confidencialidad y disponibilidad de la
-              información empresarial frente a amenazas emergentes.
-            </p>
-            <a href="./contact.html">
-              <button
-                class="px-4 py-2 bg-orange-600 text-white rounded-md hover:bg-orange-700 transition"
-              >
-                Cotizar
-              </button>
-            </a>
-          </div>
-
-          <div
-            class="card bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out"
-          >
-            <div
-              class="card-image-container bg-gray-300 flex items-center justify-center rounded-md h-40 mb-4 overflow-hidden"
-            >
-              <img
-                src="../../public/assets/images/domotica.jpg"
-                alt="Automatización y Domótica"
-                class="object-cover h-full w-full"
-              />
+      
+            <div class="flex flex-col items-center space-y-4 fade-in-up-text hidden2">
+              <div class="rounded-full overflow-hidden bg-gray-700 service-image">
+                <img src="../../public/assets/images/domotica.jpg" alt="Automation" class="w-full h-full object-cover ">
+              </div>
+              <h3 class="text-lg md:text-xl text-orange-600 font-bold text-center px-4">Automatización y Domótica</h3>
             </div>
-            <h2 class="text-lg font-bold text-orange-600 mb-2">
-              Automatización y Domótica
-            </h2>
-            <p class="text-gray-500 text-sm mb-4 justify-start text-justify">
-              Diseño de arquitecturas inteligentes para aplicaciones
-              residenciales e industriales.
-            </p>
-            <a href="./contact.html">
-              <button
-                class="px-4 py-2 bg-orange-600 text-white rounded-md hover:bg-orange-700 transition"
-              >
-                Cotizar
-              </button>
-            </a>
-          </div>
-
-          <div
-            class="card bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out"
-          >
-            <div
-              class="card-image-container bg-gray-300 flex items-center justify-center rounded-md h-40 mb-4 overflow-hidden"
-            >
-              <img
-                src="../../public/assets/images/conocimiento.jpg"
-                alt="Habilitación de Conocimiento"
-                class="object-cover h-full w-full"
-              />
+      
+            <div class="flex flex-col items-center space-y-4 fade-in-up-text hidden2">
+              <div class="rounded-full overflow-hidden bg-gray-700 service-image">
+                <img src="../../public/assets/images/ing_services.jpg" alt="Engineering" class="w-full h-full object-cover ">
+              </div>
+              <h3 class="text-lg md:text-xl text-orange-600 font-bold text-center px-4">Ingeniería de Servicios</h3>
             </div>
-            <h2 class="text-lg font-bold text-orange-600 mb-2">
-              Habilitación de Conocimiento
-            </h2>
-            <p class="text-gray-500 text-sm mb-4 justify-start text-justify">
-              Difusión de habilidades y conocimientos basados en la ciencia
-              cognitiva online.
-            </p>
-            <a href="./contact.html">
-              <button
-                class="px-4 py-2 bg-orange-600 text-white rounded-md hover:bg-orange-700 transition"
-              >
-                Cotizar
-              </button>
-            </a>
-          </div>
-
-          <div
-            class="card bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out"
-          >
-            <div
-              class="card-image-container bg-gray-300 flex items-center justify-center rounded-md h-40 mb-4 overflow-hidden"
-            >
-              <img
-                src="../../public/assets/images/ing_services.jpg"
-                alt="Ingeniería de Servicios"
-                class="object-cover h-full w-full"
-              />
+      
+            <div class="flex flex-col items-center space-y-4 fade-in-up-text hidden2">
+              <div class="rounded-full overflow-hidden bg-gray-700 service-image ">
+                <img src="../../public/assets/images/conocimiento.jpg" alt="Knowledge" class="w-full h-full object-cover ">
+              </div>
+              <h3 class="text-lg md:text-xl text-orange-600 font-bold text-center px-4">Habilitación de Conocimiento</h3>
             </div>
-            <h2 class="text-lg font-bold text-orange-600 mb-2">
-              Ingeniería de Servicios
-            </h2>
-            <p class="text-gray-500 text-sm mb-4 justify-start text-justify">
-              Servicios de ingeniería para integrar y mejorar productos,
-              servicios o instalaciones, diseñando soluciones personalizadas
-              según las necesidades del cliente.
-            </p>
-            <a href="./contact.html">
-              <button
-                class="px-4 py-2 bg-orange-600 text-white rounded-md hover:bg-orange-700 transition"
-              >
-                Cotizar
-              </button>
-            </a>
           </div>
         </div>
       </section>
@@ -556,6 +376,8 @@
           </button>
         </div>
       </div>
+      <script src="../../public/js/manejoAnimaciones.js"></script>
+    <script src="../../public/js/nav.js"></script>
     <script src="../../public/js/formSuscribe.js"></script>
     <script src="../../public/js/services.js"></script>
     <script src="../../public/js/chatBot.js"></script>
