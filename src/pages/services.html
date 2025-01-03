@@ -22,6 +22,37 @@
           max-width: 220px;
         }
       }
+      .service-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-info {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-out;
+      background-color: white;
+      border-radius: 0.5rem;
+      margin-top: 1rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-info.active {
+      max-height: 500px; /* Ajusta según el contenido */
+    }
+
+    .service-content {
+      padding: 1.5rem;
+    }
+
+    .service-image {
+      transition: transform 0.3s ease;
+    }
+
+    .service-image:hover {
+      transform: scale(1.05);
+      cursor: pointer;
+    }
  
     </style>
     <link
@@ -137,58 +168,199 @@
           </button>
         </div>
       </section>
-      <section class="scroll-section items-center gap-8 px-8 py-16 bg-orange-50 ">
+      <section class="scroll-section items-center gap-8 px-8 py-16 bg-white ">
         <div>
-          <h2
-            class="text-4xl font-bold text-orange-600 mb-4 pb-6 justify-center text-center fade-in-up-text hidden2"
-          >
+          <h2 class="text-6xl font-bold text-orange-600 mb-4 pb-6 justify-center text-center fade-in-up-text hidden2">
             SERVICIOS
           </h2>
         </div>
-        <div class="max-w-7xl mx-auto ">
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-            <div class="flex flex-col items-center space-y-4 fade-in-up-text hidden2">
-              <div class="rounded-full overflow-hidden bg-gray-700 service-image ">
-                <img src="../../public/assets/images/nube.jpg" alt="Cloud Computing" class="w-full h-full object-cover ">
+      
+        <div class="max-w-8x1 mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-24 md:gap-12">
+            
+            <!-- 1. Computación en la Nube -->
+            <div class="service-card fade-in-up-text hidden2">
+              <div class="flex flex-col items-center space-y-4">
+                <div class="rounded-full overflow-hidden bg-gray-700 service-image" onclick="toggleInfo('cloud')">
+                  <img src="../../public/assets/images/nube.jpg" alt="Cloud Computing" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-4xl md:text-xl text-orange-600 font-bold text-center ">Computación en la Nube</h3>
               </div>
-              <h3 class="text-lg md:text-xl text-orange-600 font-bold text-center px-4">Computación en la Nube</h3>
+              <div id="cloudInfo" class="service-info">
+                <div class="service-content space-y-4">
+                  <h3 class="text-2xl font-bold text-orange-600">
+                    Soluciones Cloud Empresariales
+                  </h3>
+                  <div class="text-gray-600 space-y-4">
+                    <p>
+                      Maximiza el potencial de tu empresa con nuestras soluciones
+                      de computación en la nube, diseñadas para optimizar tus
+                      operaciones y reducir costos.
+                    </p>
+                    <p>Nuestros servicios incluyen:</p>
+                    <ul class="list-disc pl-6 space-y-2">
+                      <li>Migración a la nube</li>
+                      <li>Infraestructura como servicio (IaaS)</li>
+                      <li>Respaldos automáticos</li>
+                      <li>Escalabilidad bajo demanda</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
       
-            <div class="flex flex-col items-center space-y-4 fade-in-up-text hidden2">
-              <div class="rounded-full overflow-hidden bg-gray-700 service-image" >
-                <img src="../../public/assets/images/capex.jpg" alt="Infrastructure" class="w-full h-full object-cover 
-                ">
+            <!-- 2. Infraestructura CAPEX/OPEX -->
+            <div class="service-card fade-in-up-text hidden2">
+              <div class="flex flex-col items-center space-y-4">
+                <div class="rounded-full overflow-hidden bg-gray-700 service-image" onclick="toggleInfo('capex')">
+                  <img src="../../public/assets/images/capex.jpg" alt="Infrastructure" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-4xl md:text-xl text-orange-600 font-bold text-center px-4">Infraestructura en modo CAPEX u OPEX</h3>
               </div>
-              <h3 class="text-lg md:text-xl text-orange-600 font-bold text-center px-4">Infraestructura en modo CAPEX u OPEX</h3>
+              <div id="capexInfo" class="service-info">
+                <div class="service-content space-y-4">
+                  <h3 class="text-2xl font-bold text-orange-600">
+                    Flexibilidad en Infraestructura
+                  </h3>
+                  <div class="text-gray-600 space-y-4">
+                    <p>
+                      Adaptamos nuestras soluciones a tu modelo de negocio,
+                      ofreciendo opciones flexibles de inversión en infraestructura.
+                    </p>
+                    <p>Beneficios:</p>
+                    <ul class="list-disc pl-6 space-y-2">
+                      <li>Optimización de recursos financieros</li>
+                      <li>Flexibilidad en la gestión de activos</li>
+                      <li>Planes personalizados</li>
+                      <li>Asesoramiento especializado</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
       
-            <div class="flex flex-col items-center space-y-4 fade-in-up-text hidden2">
-              <div class="rounded-full overflow-hidden bg-gray-700 service-image">
-                <img src="../../public/assets/images/service_cybersecurity.jpg" alt="Cybersecurity" class="w-full h-full object-cover ">
+            <!-- 3. Ciberseguridad -->
+            <div class="service-card fade-in-up-text hidden2">
+              <div class="flex flex-col items-center space-y-4">
+                <div class="rounded-full overflow-hidden bg-gray-700 service-image" onclick="toggleInfo('security')">
+                  <img src="../../public/assets/images/service_cybersecurity.jpg" alt="Cybersecurity" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-4xl md:text-xl text-orange-600 font-bold text-center px-4">Servicios de Ciberseguridad</h3>
               </div>
-              <h3 class="text-lg md:text-xl text-orange-600 font-bold text-center px-4">Servicios de Ciberseguridad</h3>
+              <div id="securityInfo" class="service-info">
+                <div class="service-content space-y-4">
+                  <h3 class="text-2xl font-bold text-orange-600">
+                    Protección Integral de Datos
+                  </h3>
+                  <div class="text-gray-600 space-y-4">
+                    <p>
+                      Protegemos tu información y sistemas con soluciones
+                      avanzadas de ciberseguridad, garantizando la continuidad
+                      de tu negocio.
+                    </p>
+                    <p>Servicios destacados:</p>
+                    <ul class="list-disc pl-6 space-y-2">
+                      <li>Protección contra amenazas avanzadas</li>
+                      <li>Monitoreo 24/7</li>
+                      <li>Gestión de vulnerabilidades</li>
+                      <li>Respuesta a incidentes</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
       
-            <div class="flex flex-col items-center space-y-4 fade-in-up-text hidden2">
-              <div class="rounded-full overflow-hidden bg-gray-700 service-image">
-                <img src="../../public/assets/images/domotica.jpg" alt="Automation" class="w-full h-full object-cover ">
+            <!-- 4. Automatización y Domótica -->
+            <div class="service-card fade-in-up-text hidden2">
+              <div class="flex flex-col items-center space-y-4">
+                <div class="rounded-full overflow-hidden bg-gray-700 service-image" onclick="toggleInfo('automation')">
+                  <img src="../../public/assets/images/domotica.jpg" alt="Automation" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-4xl md:text-xl text-orange-600 font-bold text-center px-4">Automatización y Domótica</h3>
               </div>
-              <h3 class="text-lg md:text-xl text-orange-600 font-bold text-center px-4">Automatización y Domótica</h3>
+              <div id="automationInfo" class="service-info">
+                <div class="service-content space-y-4">
+                  <h3 class="text-2xl font-bold text-orange-600">
+                    Soluciones Inteligentes
+                  </h3>
+                  <div class="text-gray-600 space-y-4">
+                    <p>
+                      Transformamos espacios convencionales en ambientes inteligentes
+                      y automatizados, mejorando la eficiencia y el confort.
+                    </p>
+                    <p>Características principales:</p>
+                    <ul class="list-disc pl-6 space-y-2">
+                      <li>Control inteligente de iluminación</li>
+                      <li>Gestión de clima y energía</li>
+                      <li>Sistemas de seguridad integrados</li>
+                      <li>Control remoto centralizado</li>
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
             </div>
       
-            <div class="flex flex-col items-center space-y-4 fade-in-up-text hidden2">
-              <div class="rounded-full overflow-hidden bg-gray-700 service-image">
-                <img src="../../public/assets/images/ing_services.jpg" alt="Engineering" class="w-full h-full object-cover ">
+            <!-- 5. Ingeniería de Servicios -->
+            <div class="service-card fade-in-up-text hidden2">
+              <div class="flex flex-col items-center space-y-4">
+                <div class="rounded-full overflow-hidden bg-gray-700 service-image" onclick="toggleInfo('engineering')">
+                  <img src="../../public/assets/images/ing_services.jpg" alt="Engineering" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-4xl md:text-xl text-orange-600 font-bold text-center px-4">Ingeniería de Servicios</h3>
               </div>
-              <h3 class="text-lg md:text-xl text-orange-600 font-bold text-center px-4">Ingeniería de Servicios</h3>
+              <div id="engineeringInfo" class="service-info">
+                <div class="service-content space-y-4">
+                  <h3 class="text-2xl font-bold text-orange-600">
+                    Soluciones de Ingeniería Avanzada
+                  </h3>
+                  <div class="text-gray-600 space-y-4">
+                    <p>
+                      Desarrollamos soluciones técnicas personalizadas para
+                      optimizar procesos y mejorar la eficiencia operativa.
+                    </p>
+                    <p>Áreas de especialización:</p>
+                    <ul class="list-disc pl-6 space-y-2">
+                      <li>Diseño de sistemas</li>
+                      <li>Optimización de procesos</li>
+                      <li>Consultoría técnica</li>
+                      <li>Implementación de proyectos</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
       
-            <div class="flex flex-col items-center space-y-4 fade-in-up-text hidden2">
-              <div class="rounded-full overflow-hidden bg-gray-700 service-image ">
-                <img src="../../public/assets/images/conocimiento.jpg" alt="Knowledge" class="w-full h-full object-cover ">
+            <!-- 6. Habilitación de Conocimiento -->
+            <div class="service-card fade-in-up-text hidden2">
+              <div class="flex flex-col items-center space-y-4">
+                <div class="rounded-full overflow-hidden bg-gray-700 service-image" onclick="toggleInfo('knowledge')">
+                  <img src="../../public/assets/images/conocimiento.jpg" alt="Knowledge" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-4xl md:text-xl text-orange-600 font-bold text-center px-4">Habilitación de Conocimiento</h3>
               </div>
-              <h3 class="text-lg md:text-xl text-orange-600 font-bold text-center px-4">Habilitación de Conocimiento</h3>
+              <div id="knowledgeInfo" class="service-info">
+                <div class="service-content space-y-4">
+                  <h3 class="text-2xl font-bold text-orange-600">
+                    Gestión del Conocimiento
+                  </h3>
+                  <div class="text-gray-600 space-y-4">
+                    <p>
+                      Potenciamos el desarrollo profesional mediante programas
+                      de capacitación y transferencia de conocimiento.
+                    </p>
+                    <p>Ofrecemos:</p>
+                    <ul class="list-disc pl-6 space-y-2">
+                      <li>Programas de capacitación personalizados</li>
+                      <li>Talleres prácticos</li>
+                      <li>Certificaciones profesionales</li>
+                      <li>Mentorías especializadas</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
+      
           </div>
         </div>
       </section>
@@ -376,6 +548,22 @@
           </button>
         </div>
       </div>
+      <script>
+        function toggleInfo(service) {
+          const info = document.getElementById(service + 'Info');
+          const allInfos = document.getElementsByClassName('service-info');
+          
+          // Cerrar otros paneles abiertos
+          Array.from(allInfos).forEach(el => {
+            if (el !== info && el.classList.contains('active')) {
+              el.classList.remove('active');
+            }
+          });
+          
+          // Toggle del panel actual
+          info.classList.toggle('active');
+        }
+      </script>
       <script src="../../public/js/manejoAnimaciones.js"></script>
     <script src="../../public/js/nav.js"></script>
     <script src="../../public/js/formSuscribe.js"></script>
