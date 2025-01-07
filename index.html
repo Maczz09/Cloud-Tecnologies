@@ -38,8 +38,13 @@
     <body>
         <header class="font-hanken">
             <a class="logo">
-                <img src="public/assets/images/logo.png" alt>
+                <img 
+                    src="public/assets/images/logo.png" 
+                    alt="Logo" 
+                    class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg"
+                >
             </a>
+            
             <nav>
                 <ul class="font-bold">
                     <li><a href="index.html">Inicio</a></li>
@@ -58,7 +63,7 @@
                     <div
                         class="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm"></div>
 
-                    <div class="relative w-full max-w-6xl mx-auto px-4">
+                    <div class="relative w-full max-w-6xl mx-auto px-4 mt-16">
                         <div class="grid md:grid-cols-2 gap-8">
                             <div
                                 class="text-center md:text-start flex flex-col justify-center bounce-in-left py-12 lg:py-0">
@@ -146,7 +151,7 @@
                     </div>
                 </div>
 
-                <div class="md:hidden w-full bg-gray-100 py-11222 px-3">
+                <div class="md:hidden w-full bg-gray-100 py-12 px-3">
                     <div class="w-full max-w-md mx-auto">
                         <form action="/submit-contact" method="POST"
                             class="bg-black bg-opacity-80 p-8 rounded-lg space-y-4">
