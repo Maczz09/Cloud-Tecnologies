@@ -38,13 +38,12 @@
     <body>
         <header class="font-hanken">
             <a class="logo">
-                <img 
-                    src="public/assets/images/logo.png" 
-                    alt="Logo" 
-                    class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg"
-                >
+                <img
+                    src="public/assets/images/logo.png"
+                    alt="Logo"
+                    class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
             </a>
-            
+
             <nav>
                 <ul class="font-bold">
                     <li><a href="index.html">Inicio</a></li>
@@ -55,7 +54,7 @@
         </header>
 
         <main class="font-hanken main-content">
-            
+
             <section class="relative w-full">
                 <div
                     class="relative w-full bg-cover bg-center min-h-screen md:h-screen flex items-center justify-center"
@@ -89,62 +88,59 @@
 
                             <div
                                 class="hidden sm:block w-full max-w-md mx-auto bounce-in-right">
-                                <form action="/submit-contact" method="POST"
+                                <form id="form"
                                     class="bg-black bg-opacity-80 p-8 rounded-lg space-y-4">
                                     <h2
-                                        class="text-2xl font-bold text-orange-600 mb-6 text-center">
-                                        Contacta con un asesor
-                                    </h2>
+                                        class="text-2xl font-bold text-orange-600 mb-6 text-center">Contacta
+                                        con un asesor</h2>
                                     <p
-                                        class="text-white text-sm mb-6 text-center">
-                                        Ingresa los datos de tu empresa RUC 20 y
-                                        un asesor de negocios se
-                                        comunicará contigo para ayudarte
-                                    </p>
+                                        class="text-white text-sm mb-6 text-center">Ingresa
+                                        los datos de tu empresa RUC 20 y un
+                                        asesor de negocios se comunicará contigo
+                                        para ayudarte</p>
                                     <div>
                                         <label for="name"
-                                            class="sr-only">Nombres</label>
+                                            class="sr-only">Nombres*</label>
                                         <input type="text" id="name" name="name"
-                                            required placeholder="Nombres"
+                                            required placeholder="Nombres *"
                                             class="w-full px-4 py-3 rounded-md bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-600" />
                                     </div>
                                     <div>
-                                        <label for="lastname"
+                                        <label for="last_name"
                                             class="sr-only">Apellidos</label>
-                                        <input type="text" id="lastname"
-                                            name="lastname" required
-                                            placeholder="Apellidos"
+                                        <input type="text" id="last_name"
+                                            name="last_name" required
+                                            placeholder="Apellidos *"
                                             class="w-full px-4 py-3 rounded-md bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-600" />
                                     </div>
                                     <div>
                                         <label for="ruc" class="sr-only">RUC
                                             20</label>
                                         <input type="text" id="ruc" name="ruc"
-                                            pattern="20\d{11}" required
+                                            pattern="20\d{11}"
                                             placeholder="RUC 20"
                                             class="w-full px-4 py-3 rounded-md bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-600" />
                                     </div>
                                     <div>
                                         <label for="phone"
                                             class="sr-only">Teléfono /
-                                            Celular</label>
-                                        <input type="tel" id="phone"
-                                            name="phone" required
-                                            placeholder="Teléfono / Celular"
+                                            Celular*</label>
+                                        <input type="text" name="phone"
+                                            id="phone" required
+                                            placeholder="Teléfono / Celular *"
                                             class="w-full px-4 py-3 rounded-md bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-600" />
                                     </div>
                                     <div>
                                         <label for="email"
-                                            class="sr-only">Email</label>
-                                        <input type="email" id="email"
-                                            name="email" required
-                                            placeholder="Email"
+                                            class="sr-only">Email*</label>
+                                        <input type="text" name="email"
+                                            id="email" required
+                                            placeholder="Email *"
                                             class="w-full px-4 py-3 rounded-md bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-600" />
                                     </div>
-                                    <button type="submit"
+                                    <input type="submit" id="button"
+                                        value="Enviar"
                                         class="w-full py-4 bg-orange-600 text-white text-xl font-semibold rounded-md hover:bg-orange-700 transition duration-300">
-                                        ENVIAR
-                                    </button>
                                 </form>
                             </div>
                         </div>
@@ -153,78 +149,86 @@
 
                 <div class="md:hidden w-full bg-gray-100 py-12 px-3">
                     <div class="w-full max-w-md mx-auto">
-                        <form action="/submit-contact" method="POST"
+                        <form id="form"
                             class="bg-black bg-opacity-80 p-8 rounded-lg space-y-4">
                             <h2
-                                class="text-2xl font-bold text-orange-600 mb-6 text-center">
-                                Contacta con un asesor
-                            </h2>
-                            <p class="text-white text-sm mb-6 text-center">
-                                Ingresa los datos de tu empresa RUC 20 y un
-                                asesor de negocios se
-                                comunicará contigo para ayudarte
-                            </p>
+                                class="text-2xl font-bold text-orange-600 mb-6 text-center">Contacta
+                                con un asesor</h2>
+                            <p
+                                class="text-white text-sm mb-6 text-center">Ingresa
+                                los datos de tu empresa RUC 20 y un
+                                asesor de negocios se comunicará contigo
+                                para ayudarte</p>
                             <div>
-                                <label for="name-mobile"
-                                    class="sr-only">Nombres</label>
-                                <input type="text" id="name-mobile" name="name"
-                                    required placeholder="Nombres"
+                                <label for="name"
+                                    class="sr-only">Nombres*</label>
+                                <input type="text" id="name" name="name"
+                                    required placeholder="Nombres *"
                                     class="w-full px-4 py-3 rounded-md bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-600" />
                             </div>
                             <div>
-                                <label for="lastname-mobile"
+                                <label for="last_name"
                                     class="sr-only">Apellidos</label>
-                                <input type="text" id="lastname-mobile"
-                                    name="lastname" required
-                                    placeholder="Apellidos"
+                                <input type="text" id="last_name"
+                                    name="last_name" required
+                                    placeholder="Apellidos *"
                                     class="w-full px-4 py-3 rounded-md bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-600" />
                             </div>
                             <div>
-                                <label for="ruc-mobile" class="sr-only">RUC
+                                <label for="ruc" class="sr-only">RUC
                                     20</label>
-                                <input type="text" id="ruc-mobile" name="ruc"
-                                    pattern="20\d{11}" required
+                                <input type="text" id="ruc" name="ruc"
+                                    pattern="20\d{11}"
                                     placeholder="RUC 20"
                                     class="w-full px-4 py-3 rounded-md bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-600" />
                             </div>
                             <div>
-                                <label for="phone-mobile"
-                                    class="sr-only">Teléfono / Celular</label>
-                                <input type="tel" id="phone-mobile" name="phone"
-                                    required placeholder="Teléfono / Celular"
+                                <label for="phone"
+                                    class="sr-only">Teléfono /
+                                    Celular*</label>
+                                <input type="text" name="phone"
+                                    id="phone" required
+                                    placeholder="Teléfono / Celular *"
                                     class="w-full px-4 py-3 rounded-md bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-600" />
                             </div>
                             <div>
-                                <label for="email-mobile"
-                                    class="sr-only">Email</label>
-                                <input type="email" id="email-mobile"
-                                    name="email" required placeholder="Email"
+                                <label for="email"
+                                    class="sr-only">Email*</label>
+                                <input type="text" name="email"
+                                    id="email" required
+                                    placeholder="Email *"
                                     class="w-full px-4 py-3 rounded-md bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-600" />
                             </div>
-                            <button type="submit"
+                            <input type="submit" id="button"
+                                value="Enviar"
                                 class="w-full py-4 bg-orange-600 text-white text-xl font-semibold rounded-md hover:bg-orange-700 transition duration-300">
-                                ENVIAR
-                            </button>
                         </form>
+
                     </div>
                 </div>
             </section>
             <section class="scroll-section">
                 <div class="bg-orange-400 py-8 px-8">
                     <!-- Container with flex column on mobile, row on desktop -->
-                    <div class="flex flex-col md:flex-row items-center md:justify-between gap-8">
+                    <div
+                        class="flex flex-col md:flex-row items-center md:justify-between gap-8">
                         <!-- Text -->
-                        <div class="text-white text-bold text-2xl font-bold w-full md:w-1/3 fade-in-left-2 hidden2">
+                        <div
+                            class="text-white text-bold text-2xl font-bold w-full md:w-1/3 fade-in-left-2 hidden2">
                             <p>Nuestros Patrocinadores</p>
                         </div>
-                
+
                         <!-- Carousel -->
-                        <div class="relative w-full md:w-2/3 overflow-hidden fade-in-right-2 hidden2">
+                        <div
+                            class="relative w-full md:w-2/3 overflow-hidden fade-in-right-2 hidden2">
                             <!-- Fade effects -->
-                            <div class="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-orange-400 via-orange-400 to-transparent z-10"></div>
-                            <div class="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-orange-400 via-orange-400 to-transparent z-10"></div>
-                
-                            <div id="carousel" class="flex gap-8 items-center animate-scroll">
+                            <div
+                                class="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-orange-400 via-orange-400 to-transparent z-10"></div>
+                            <div
+                                class="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-orange-400 via-orange-400 to-transparent z-10"></div>
+
+                            <div id="carousel"
+                                class="flex gap-8 items-center animate-scroll">
                                 <!-- Images will be generated dynamically with JavaScript -->
                             </div>
                         </div>
@@ -352,8 +356,8 @@
             <section class="mt-12 mb-12 scroll-section">
 
                 <div
-                    class="grid grid-cols-4 grid-rows-2 gap-4 fade-in-up-text hidden2 card-container">
-                    <div class="col-span-2 row-span-2 col-start-2">
+                    class=" fade-in-up-text hidden2 card-container">
+                    <div class>
                         <div class="card">
                             <img src="public/assets/images/calidad.jpg" alt
                                 class="img_principal">
@@ -515,6 +519,22 @@
                     </div>
                 </footer>
                 <!-- Modal de confirmación -->
+                <div id="formConfirmationModal"
+                    class="fixed inset-0 items-center justify-center bg-black bg-opacity-50 z-50 hidden">
+                    <div
+                        class="w-full max-w-md p-6 bg-orange-600 rounded-lg shadow-md text-center">
+                        <h2 id="formModalTitle"
+                            class="text-lg font-bold text-white">¡Formulario
+                            enviado!</h2>
+                        <p id="formModalMessage" class="mt-4 text-white">Gracias
+                            por
+                            tu información. Nos pondremos en contacto contigo
+                            pronto.</p>
+                        <button id="closeFormModalButton"
+                            class="mt-6 px-4 py-2 font-semibold text-white bg-gray-700 rounded hover:bg-gray-800 focus:outline-none">Cerrar</button>
+                    </div>
+                </div>
+                <!-- Modal de confirmación -->
                 <div
                     id="confirmationModal"
                     class="fixed inset-0 items-center justify-center bg-black bg-opacity-50 z-50 hidden">
@@ -531,13 +551,82 @@
                         </button>
                     </div>
                 </div>
-                 <script src="public/js/nav.js"></script>
-            <script src="public/js/formSuscribe.js"></script>
-            <script src="public/js/chatBot.js"></script>
-            <script src="public/js/carrusel.js"></script>
-            <script src="public/js/main.js"></script>
-            <script src="public/js/manejoAnimaciones.js"></script>
+                <!-- Botón flotante de WhatsApp -->
+                <div class="fixed bottom-32 right-6 z-50">
+                    <a href="https://api.whatsapp.com/send/?phone=%2B51970262197&text&type=phone_number&app_absent=0" target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Contactar por WhatsApp"
+                        class="bg-green-500 hover:bg-green-600 rounded-full shadow-lg flex items-center justify-center w-16 h-16 transition-transform transform hover:scale-110">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="white"
+                            viewBox="0 0 24 24" class="w-8 h-8">
+                            <path
+                                d="M12 0C5.371 0 0 5.371 0 12c0 2.123.553 4.172 1.604 5.975L0 24l6.166-1.585C8.055 23.444 10.015 24 12 24c6.629 0 12-5.371 12-12S18.629 0 12 0zm0 21.5c-1.831 0-3.613-.475-5.178-1.375l-.37-.211-3.593.924.964-3.445-.24-.383A9.425 9.425 0 0 1 2.5 12c0-5.243 4.257-9.5 9.5-9.5S21.5 6.757 21.5 12 17.243 21.5 12 21.5zm4.966-6.29c-.263-.131-1.558-.768-1.8-.851-.243-.084-.42-.126-.597.132-.177.258-.684.851-.837 1.026-.153.175-.31.197-.573.066-.263-.132-1.11-.409-2.113-1.305-.78-.694-1.307-1.55-1.462-1.813-.153-.263-.016-.405.115-.537.118-.117.263-.31.394-.465.133-.156.177-.263.265-.437.088-.175.044-.328-.022-.459-.065-.131-.575-1.383-.788-1.897-.207-.497-.418-.426-.575-.426-.153-.008-.33-.01-.506-.01a.97.97 0 0 0-.71.334c-.243.264-.922.89-.922 2.171s.944 2.512 1.075 2.687c.131.175 1.854 2.754 4.497 3.86.63.272 1.121.435 1.504.557.632.2 1.208.172 1.663.105.507-.075 1.558-.634 1.779-1.245.221-.61.221-1.133.153-1.245-.066-.115-.24-.184-.504-.316z" />
+                        </svg>
+                    </a>
+                </div>
+
+                <div>
+                    <iframe
+                        id="iframeId"
+                        src="https://www.stack-ai.com/embed/58c6d093-8177-4e80-bdee-682f7f423925/67600dc0-4e3c-4ebd-814e-fb67ae06aa50/6734fe1bfb2b67a6b93d2984"
+                        frameborder="0"
+                        style="
+                        position: fixed;
+                        z-index: 1;
+                        bottom: 25px;
+                        right: 25px;
+                        border-radius: 10px;
+                        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+                        overflow: hidden;
+                        transition: width 0.3s ease, height 0.3s ease;
+                        width: 100%;
+                        height: 100%;
+                        max-width: 450px;
+                        max-height: 625px;
+                      "></iframe>
+                </div>
+                <script type="text/javascript"
+                    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+                <script type="text/javascript">
+    emailjs.init('ckLOSZGM7mrkvDu18');
+
+    const btn = document.getElementById('button');
+    const form = document.getElementById('form');
+    const modal = document.getElementById('formConfirmationModal');
+    const closeModalButton = document.getElementById('closeFormModalButton');
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        btn.value = 'Enviando...';
+
+        const serviceID = 'default_service';
+        const templateID = 'template_06tk0mf';
+
+        emailjs.sendForm(serviceID, templateID, this)
+            .then(() => {
+                btn.value = 'Enviar';
+                // Mostrar modal de confirmación
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+            }, (err) => {
+                btn.value = 'Enviar';
+                alert('Error al enviar el formulario: ' + JSON.stringify(err));
+            });
+    });
+
+    closeModalButton.addEventListener('click', () => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+    });
+</script>
+                <script src="public/js/formContact.js"></script>
+                <script src="public/js/nav.js"></script>
+                <script src="public/js/formSuscribe.js"></script>
+                <script src="public/js/chatBot.js"></script>
+                <script src="public/js/carrusel.js"></script>
+                <script src="public/js/main.js"></script>
+                <script src="public/js/manejoAnimaciones.js"></script>
             </body>
-            
-           
+
         </html>
