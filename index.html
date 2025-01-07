@@ -210,26 +210,23 @@
                 </div>
             </section>
             <section class="scroll-section">
-                <div
-                    class="bg-orange-400 py-8 flex items-center justify-between px-8">
-                    <!-- Texto -->
-                    <div
-                        class="text-white text-bold text-2xl font-bold w-1/3 fade-in-left-2 hidden2">
-                        <p>Nuestros Patrocinadores</p>
-                    </div>
-
-                    <!-- Carrusel -->
-                    <div
-                        class="relative w-2/3 overflow-hidden fade-in-right-2 hidden2">
-                        <!-- Efecto desvanecido a los lados -->
-                        <div
-                            class="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-orange-400 via-orange-400 to-transparent z-10"></div>
-                        <div
-                            class="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-orange-400 via-orange-400 to-transparent z-10"></div>
-
-                        <div id="carousel"
-                            class="flex gap-8 items-center animate-scroll">
-                            <!-- Las imágenes se generarán dinámicamente con JavaScript -->
+                <div class="bg-orange-400 py-8 px-8">
+                    <!-- Container with flex column on mobile, row on desktop -->
+                    <div class="flex flex-col md:flex-row items-center md:justify-between gap-8">
+                        <!-- Text -->
+                        <div class="text-white text-bold text-2xl font-bold w-full md:w-1/3 fade-in-left-2 hidden2">
+                            <p>Nuestros Patrocinadores</p>
+                        </div>
+                
+                        <!-- Carousel -->
+                        <div class="relative w-full md:w-2/3 overflow-hidden fade-in-right-2 hidden2">
+                            <!-- Fade effects -->
+                            <div class="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-orange-400 via-orange-400 to-transparent z-10"></div>
+                            <div class="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-orange-400 via-orange-400 to-transparent z-10"></div>
+                
+                            <div id="carousel" class="flex gap-8 items-center animate-scroll">
+                                <!-- Images will be generated dynamically with JavaScript -->
+                            </div>
                         </div>
                     </div>
                 </div>
